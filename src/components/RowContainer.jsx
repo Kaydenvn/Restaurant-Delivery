@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import NotFound from './img/NotFound.svg';
 import { useStateValue } from '../context/StateProvider';
 import { actionType } from '../context/reducer';
+import { Link } from 'react-router-dom';
 
 const RowContainer = ({ flag, data, scrollValue }) => {
   const rowContainer = useRef();
@@ -37,9 +38,10 @@ const RowContainer = ({ flag, data, scrollValue }) => {
     >
       {data && data.length > 0 ? (
         data.map((item) => (
-          <div
+          <Link
+            to={'/product'}
             key={item?.id}
-            className="w-275 h-[175px] min-w-[275px] md:w-300 md:min-w-[300px]  bg-cardOverlay rounded-lg py-2 px-4  my-12 backdrop-blur-lg hover:drop-shadow-lg flex flex-col items-center justify-evenly relative"
+            className="w-275 h-[175px] min-w-[275px] md:w-300 md:min-w-[300px] cursor-pointer  bg-cardOverlay rounded-lg py-2 px-4  my-12 backdrop-blur-lg hover:drop-shadow-lg flex flex-col items-center justify-evenly relative"
           >
             <div className="w-full flex items-center justify-between">
               <motion.div className="w-40 h-40 -mt-8 drop-shadow-2xl" whileHover={{ scale: 1.2 }}>
@@ -63,7 +65,7 @@ const RowContainer = ({ flag, data, scrollValue }) => {
                 </p>
               </div>
             </div>
-          </div>
+          </Link>
         ))
       ) : (
         <div className="w-full flex flex-col items-center justify-center">
