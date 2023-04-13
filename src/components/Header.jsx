@@ -29,8 +29,10 @@ const Header = () => {
       {/* destop and tablet */}
       <div className="hidden md:flex w-full h-full">
         <div className="flex gap-2 items-center">
-          <img src={Logo} className="w-8 object-cover" alt="logo" />
-          <p className="text-headingColor text-xl font-semibold"> BK Food</p>
+          <Link to={'/'}>
+            <img src={Logo} className="w-8 object-cover" alt="logo" />
+            <p className="text-headingColor text-xl font-semibold"> BK Food</p>
+          </Link>
         </div>
 
         <div className="flex items-center gap-8 ml-auto">
