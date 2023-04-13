@@ -28,12 +28,10 @@ const Header = () => {
     <div className="fixed z-50 w-screen p-3 px-4 md:p-6 md:px-16 bg-primary">
       {/* destop and tablet */}
       <div className="hidden md:flex w-full h-full">
-        <div className="flex gap-2 items-center cursor-pointer">
-          <Link to={'/'}>
-            <img src={Logo} className="w-8 object-cover" alt="logo" />
-            <p className="text-headingColor text-xl font-semibold"> BK Food</p>
-          </Link>
-        </div>
+        <Link to={'/'} className="flex gap-2 items-center cursor-pointer">
+          <img src={Logo} className="w-8 object-cover" alt="logo" />
+          <p className="text-headingColor text-xl font-semibold"> BK Food</p>
+        </Link>
 
         <div className="flex items-center gap-8 ml-auto">
           <motion.ul
